@@ -1,0 +1,14 @@
+{
+ "db_name": "1bd3e0294da19198", 
+ "db_password": "kOhRkS4dGYdtg3Qa", 
+ "developer_mode": 1, 
+ "dormant": true, 
+ "limits": {
+  "space_usage": {
+   "backup_size": 4.0, 
+   "database_size": 25.07, 
+   "files_size": 2.0, 
+   "total": 31.07
+  }
+ }
+}

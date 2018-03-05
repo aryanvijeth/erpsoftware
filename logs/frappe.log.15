@@ -1,0 +1,1893 @@
+[ERROR] 2018-02-12 14:36:35,355 | /home/erpnexty/frappe-bench/apps/frappe/frappe/app.py:
+Site: trinity
+Form Dict: {
+ "cmd": "frappe.core.doctype.user.user.sign_up", 
+ "email": "aryanvijeth@gmail.com", 
+ "full_name": "aryan", 
+ "redirect_to": ""
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 777, in sign_up
+    user.insert()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.run_post_save_methods()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 887, in run_post_save_methods
+    self.run_method("on_update")
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 1029, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 1012, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 749, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 90, in on_update
+    self.send_password_notification(self.__new_password)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 198, in send_password_notification
+    self.send_welcome_mail_to_user()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 267, in send_welcome_mail_to_user
+    site_url=get_url(),
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 296, in send_login_mail
+    delayed=(not now) if now!=None else self.flags.delay_emails, retry=3)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/__init__.py", line 436, in sendmail
+    inline_images=inline_images, header=header)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/email/queue.py", line 72, in send
+    sender = email_account.default_sender
+AttributeError: 'NoneType' object has no attribute 'default_sender'
+[ERROR] 2018-02-12 14:36:35,456 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-02-12 14:36:35.357864-127.0.0.1-803
+[ERROR] 2018-02-12 14:37:20,340 | /home/erpnexty/frappe-bench/apps/frappe/frappe/app.py:
+Site: trinity
+Form Dict: {
+ "cmd": "frappe.core.doctype.user.user.sign_up", 
+ "email": "aryanvijeth@gmail.com", 
+ "full_name": "aryan", 
+ "redirect_to": ""
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 777, in sign_up
+    user.insert()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.run_post_save_methods()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 887, in run_post_save_methods
+    self.run_method("on_update")
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 1029, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 1012, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 749, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 90, in on_update
+    self.send_password_notification(self.__new_password)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 198, in send_password_notification
+    self.send_welcome_mail_to_user()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 267, in send_welcome_mail_to_user
+    site_url=get_url(),
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 296, in send_login_mail
+    delayed=(not now) if now!=None else self.flags.delay_emails, retry=3)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/__init__.py", line 436, in sendmail
+    inline_images=inline_images, header=header)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/email/queue.py", line 72, in send
+    sender = email_account.default_sender
+AttributeError: 'NoneType' object has no attribute 'default_sender'
+[ERROR] 2018-02-12 14:37:20,378 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-02-12 14:37:20.340988-127.0.0.1-93c
+[ERROR] 2018-02-12 14:37:47,179 | /home/erpnexty/frappe-bench/apps/frappe/frappe/app.py:
+Site: trinity
+Form Dict: {
+ "cmd": "frappe.core.doctype.user.user.sign_up", 
+ "email": "aryanvijeth@gmail.com", 
+ "full_name": "aryan", 
+ "redirect_to": ""
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 777, in sign_up
+    user.insert()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 245, in insert
+    self.run_post_save_methods()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 887, in run_post_save_methods
+    self.run_method("on_update")
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 1029, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 1012, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 749, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 90, in on_update
+    self.send_password_notification(self.__new_password)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 198, in send_password_notification
+    self.send_welcome_mail_to_user()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 267, in send_welcome_mail_to_user
+    site_url=get_url(),
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/user/user.py", line 296, in send_login_mail
+    delayed=(not now) if now!=None else self.flags.delay_emails, retry=3)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/__init__.py", line 436, in sendmail
+    inline_images=inline_images, header=header)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/email/queue.py", line 72, in send
+    sender = email_account.default_sender
+AttributeError: 'NoneType' object has no attribute 'default_sender'
+[ERROR] 2018-02-12 14:37:47,219 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-02-12 14:37:47.179645-127.0.0.1-eca
+[DEBUG] 2018-02-13 12:56:27,095 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 12:57:28,138 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 12:58:28,397 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 12:59:28,661 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:00:29,138 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:01:29,378 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:02:29,698 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:03:29,990 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:04:30,225 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:05:30,469 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:06:30,777 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:07:31,359 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:08:31,576 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:09:32,181 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:10:32,464 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:11:32,673 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:12:33,013 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:13:33,300 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:14:33,593 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:15:34,304 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:16:34,525 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:17:34,844 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:18:35,106 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:19:35,281 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:20:35,521 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:21:35,915 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:22:36,196 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:23:36,438 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:24:36,663 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:25:37,492 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:26:37,790 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:27:37,946 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:28:38,165 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:29:38,636 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:30:38,772 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:31:38,994 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:32:39,229 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:33:39,408 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:34:39,637 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:35:39,987 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:36:40,242 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:37:40,398 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:38:40,542 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:39:40,691 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:40:41,092 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:41:41,550 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:42:41,916 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:43:42,312 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:44:42,671 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:45:42,967 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:46:43,195 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:47:43,429 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:48:43,718 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:49:43,911 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:50:44,219 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:51:44,463 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:52:44,677 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:53:44,929 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:54:45,095 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:55:45,271 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:56:45,588 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:57:45,847 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:58:46,239 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 13:59:46,550 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:00:46,831 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:01:47,084 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:02:47,327 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:03:47,523 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:04:47,904 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:05:48,180 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:06:48,539 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:07:48,671 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:08:48,861 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:09:49,096 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:10:49,455 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:11:49,688 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:12:49,949 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:13:50,155 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:14:50,334 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:15:50,509 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:16:50,761 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:17:50,932 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:18:51,201 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:19:51,466 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:20:51,768 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:21:51,946 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:22:52,250 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:23:52,704 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:24:52,925 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:25:53,068 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:26:53,217 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:27:53,469 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:28:53,735 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:29:53,893 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:30:54,133 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:31:54,321 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:32:55,427 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:33:55,771 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:34:55,939 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:35:56,281 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:36:56,529 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:37:56,775 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:38:56,948 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:39:57,140 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:40:57,371 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:41:57,648 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:42:57,781 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:43:58,073 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:44:58,370 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:45:58,628 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:46:58,761 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:47:59,117 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:48:59,390 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:49:59,803 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:51:00,109 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:52:00,292 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:53:00,570 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:54:00,833 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:55:01,105 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:56:01,317 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:57:01,522 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:58:01,647 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 14:59:01,901 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:00:02,245 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:01:02,508 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:02:02,770 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:03:03,047 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:04:03,384 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:05:03,599 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:06:03,881 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:07:04,040 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:08:04,265 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:09:04,559 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:10:05,039 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:11:05,228 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:12:05,897 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:13:06,114 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:14:06,353 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:15:06,571 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:16:06,748 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:17:06,897 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:18:07,209 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:19:07,482 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:20:07,806 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:21:08,124 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:22:08,405 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:23:08,743 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:24:09,305 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:25:09,732 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:26:09,981 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:27:10,197 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:28:10,397 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:29:10,623 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:30:10,811 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:31:11,021 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:32:11,259 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:33:11,562 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:34:11,778 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:35:12,163 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:36:12,899 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:37:13,210 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:38:13,413 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:39:13,706 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:40:14,011 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:41:14,348 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:42:14,591 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:43:14,803 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:44:15,004 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:45:15,269 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:46:15,518 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:47:15,763 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:48:16,139 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:49:16,566 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:50:16,811 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:51:17,256 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:52:17,452 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:53:17,627 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:54:17,967 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:55:18,241 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:56:18,683 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:57:18,871 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:58:19,165 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 15:59:19,426 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:00:19,802 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:01:19,989 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:02:20,349 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:03:20,538 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:04:20,773 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:05:21,062 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:06:21,325 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:07:21,499 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:08:21,690 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:09:21,949 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:10:22,208 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:11:22,511 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:12:22,985 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:13:23,189 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:14:23,460 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:15:23,685 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:16:24,032 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:17:24,294 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:18:24,528 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:19:24,776 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:20:25,138 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:21:25,491 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:22:25,848 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:23:26,121 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:24:26,709 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:25:28,222 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:26:30,046 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:27:30,361 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:28:32,636 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:29:33,044 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:30:35,300 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:31:35,670 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:32:36,028 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:33:36,257 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:34:36,421 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:35:36,598 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:36:36,884 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:37:37,094 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:38:37,263 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:39:37,596 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:40:38,151 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:41:38,594 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:42:38,884 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:43:39,082 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:44:39,443 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:45:39,716 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:46:39,994 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:47:40,180 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:48:40,458 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:49:40,623 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:50:41,041 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:51:41,288 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:52:41,719 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:53:42,032 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:54:42,229 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:55:42,751 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:56:42,996 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:57:43,306 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:58:43,625 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 16:59:43,873 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:00:44,174 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:01:44,478 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:02:44,816 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:03:45,082 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:04:45,555 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:05:45,868 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:06:46,093 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:07:46,498 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:08:46,786 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:09:47,094 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:10:47,344 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:11:47,745 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:12:48,081 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:13:48,391 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:14:48,682 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:15:48,850 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:16:49,196 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:17:49,394 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:18:50,393 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:19:50,691 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:20:50,907 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:21:51,247 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:22:51,544 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:23:52,021 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:24:52,624 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:25:52,903 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:26:53,631 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:27:53,934 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:28:54,312 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:29:54,527 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:30:54,677 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:31:55,505 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:32:55,831 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:33:56,226 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:34:56,473 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:35:57,654 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:36:57,927 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:37:58,723 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:38:58,848 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:39:59,066 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:40:59,300 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:41:59,602 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:43:01,191 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:44:01,500 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:45:03,419 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:46:04,091 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:47:04,295 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:48:06,241 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:49:06,483 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:50:06,652 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:51:06,793 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:52:07,037 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:53:07,420 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:54:07,931 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:55:08,059 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:56:08,639 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:57:08,892 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:58:09,370 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 17:59:09,717 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:00:09,877 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:01:10,116 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:02:10,327 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:03:10,529 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:04:11,014 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[ERROR] 2018-02-13 18:04:49,519 | /home/erpnexty/frappe-bench/apps/frappe/frappe/app.py:
+Site: site1.local
+Form Dict: {
+ "action": "Save", 
+ "cmd": "frappe.desk.form.save.savedocs", 
+ "doc": "{\"no_email\":1,\"total_rows\":0,\"show_only_errors\":1,\"creation\":\"2018-02-13 17:55:37.916457\",\"doctype\":\"Data Import\",\"owner\":\"Administrator\",\"overwrite\":0,\"reference_doctype\":\"Quotation\",\"modified_by\":\"Administrator\",\"skip_errors\":0,\"only_update\":0,\"idx\":0,\"submit_after_import\":0,\"docstatus\":0,\"import_status\":\"\",\"name\":\"Import on 13-02-2018 17:55:37\",\"ignore_encoding_errors\":0,\"modified\":\"2018-02-13 17:55:37.956074\",\"__last_sync_on\":\"2018-02-13T12:30:39.200Z\",\"import_file\":\"www.google.com\",\"__unsaved\":1}"
+}
+Request Error
+Traceback (most recent call last):
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/app.py", line 62, in application
+    response = frappe.handler.handle()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/handler.py", line 22, in handle
+    data = execute_cmd(cmd)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/handler.py", line 53, in execute_cmd
+    return frappe.call(method, **frappe.form_dict)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/__init__.py", line 939, in call
+    return fn(*args, **newargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/desk/form/save.py", line 22, in savedocs
+    doc.save()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 256, in save
+    return self._save(*args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 290, in _save
+    self.run_before_save_methods()
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 859, in run_before_save_methods
+    self.run_method("validate")
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 755, in run_method
+    out = Document.hook(fn)(self, *args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 1024, in composer
+    return composed(self, method, *args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 1007, in runner
+    add_to_return_value(self, fn(self, *args, **kwargs))
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/model/document.py", line 749, in <lambda>
+    fn = lambda self, *args, **kwargs: getattr(self, method)(*args, **kwargs)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/data_import/data_import.py", line 28, in validate
+    upload(data_import_doc=self, from_data_import="Yes", validate_template=True)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/core/doctype/data_import/importer.py", line 267, in upload
+    fname, fcontent = get_file(data_import_doc.import_file)
+  File "/home/erpnexty/frappe-bench/apps/frappe/frappe/utils/file_manager.py", line 281, in get_file
+    with open(encode(file_path), 'r') as f:
+IOError: [Errno 2] No such file or directory: './site1.local/public/files/www.google.com'
+[ERROR] 2018-02-13 18:04:50,797 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-02-13 18:04:49.520141-127.0.0.1-f3b
+[DEBUG] 2018-02-13 18:05:11,162 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:06:11,504 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:07:11,972 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:08:12,137 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:09:12,374 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:10:12,537 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:11:12,810 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:12:13,030 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:13:13,502 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:14:14,460 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:15:15,065 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:16:15,464 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:17:17,032 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:18:17,578 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:19:18,457 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:20:18,892 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:21:19,052 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:22:19,347 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:23:20,208 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:24:20,409 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:25:21,054 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:26:21,428 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:27:21,689 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:28:22,644 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:29:23,457 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:30:23,668 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:31:23,816 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:32:24,114 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:33:24,359 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:34:24,646 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:35:24,969 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:36:25,223 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:37:25,580 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:38:26,128 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:39:26,326 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:40:26,732 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:41:26,929 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:42:27,189 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:43:27,489 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:44:28,043 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:45:28,358 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:46:28,733 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:47:28,974 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:48:29,203 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:49:29,440 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:50:29,753 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:51:30,016 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:52:30,244 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:53:30,792 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:54:30,965 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:55:31,148 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:56:31,358 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:57:31,650 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:58:31,989 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 18:59:32,542 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:00:32,777 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:01:33,067 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:02:33,376 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:03:33,575 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:04:33,717 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:05:33,977 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:06:34,350 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:07:34,643 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:08:34,989 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:09:35,311 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:10:35,560 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:11:35,795 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:12:36,006 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:13:36,263 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:14:36,600 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:15:36,897 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:16:37,183 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:17:37,483 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:18:37,822 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:19:38,188 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:20:38,372 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:21:38,513 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:22:38,820 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:23:39,062 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:24:40,652 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:25:41,000 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:26:42,225 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:27:42,487 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:28:42,962 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:29:43,182 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:30:43,461 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:31:43,759 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:32:44,049 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:33:44,281 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:34:44,557 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:35:44,849 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:36:45,277 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:37:45,469 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:38:45,723 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:39:46,038 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:40:46,444 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:41:46,698 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:42:46,854 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:43:47,042 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:44:47,259 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:45:47,411 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:46:47,590 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:47:47,903 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:48:48,263 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:49:48,507 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:50:48,712 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:51:49,053 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:52:49,342 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:53:49,821 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:54:50,154 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:55:50,534 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:56:50,890 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:57:51,066 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:58:51,230 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 19:59:51,492 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:00:51,795 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:01:51,958 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:02:52,608 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:03:52,894 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:04:53,407 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:05:54,518 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:06:54,894 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:07:55,223 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:08:55,845 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:09:56,026 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:10:56,294 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:11:56,632 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:12:56,886 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:13:57,072 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:14:57,277 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:15:57,630 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:16:57,924 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:17:58,289 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:18:58,595 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:19:58,871 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:20:59,265 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:21:59,661 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:22:59,871 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:23:59,975 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:25:00,191 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:26:00,482 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:27:00,760 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:28:01,158 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:29:01,516 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:30:01,689 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:31:01,887 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:32:02,234 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:33:02,421 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:34:02,648 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:35:02,866 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:36:03,146 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:37:03,462 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:38:03,720 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:39:03,920 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:40:04,169 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:41:04,368 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:42:04,562 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:43:04,843 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:44:05,068 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:45:05,407 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:46:05,627 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:47:05,836 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:48:06,143 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:49:06,440 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:50:06,606 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:51:06,733 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:52:06,932 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:53:07,174 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:54:07,464 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:55:07,722 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:56:07,990 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:57:08,217 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:58:08,743 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 20:59:09,133 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:00:09,502 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:01:09,656 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:02:09,995 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:03:11,264 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:04:13,670 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:05:13,836 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:06:14,028 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:07:14,223 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:08:14,511 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:09:14,775 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:10:15,062 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:11:15,258 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:12:15,817 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:13:16,143 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:14:16,515 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:15:16,965 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:16:17,164 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:17:17,432 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:18:17,700 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:19:17,868 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:20:18,170 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:21:18,417 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:22:18,695 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:23:18,956 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:24:19,193 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:25:19,534 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:26:19,729 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:27:19,900 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:28:20,071 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:29:20,327 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:30:20,560 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:31:20,837 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:32:21,244 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:33:21,537 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:34:21,918 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:35:22,266 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:36:22,483 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:37:22,740 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:38:23,016 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:39:23,232 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:40:23,536 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:41:23,836 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:42:24,150 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:43:24,454 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:44:24,788 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:45:25,069 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:46:25,286 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:47:25,579 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:48:25,837 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:49:26,015 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:50:26,228 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:51:26,396 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:52:26,581 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:53:26,737 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:54:26,905 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:55:27,280 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:56:27,556 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:57:27,727 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:58:28,003 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 21:59:28,307 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:00:28,532 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:01:28,740 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:02:29,139 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:03:29,380 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:04:29,693 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:05:29,849 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:06:30,194 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:07:30,474 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:08:30,753 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:09:31,014 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:10:31,302 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:11:31,544 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:12:31,697 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:13:31,901 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:14:32,151 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:15:32,364 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:16:32,674 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:17:32,974 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:18:33,307 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:19:33,649 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:20:33,941 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:21:34,247 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:22:34,415 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:23:34,549 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:24:34,728 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:25:34,924 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:26:35,095 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:27:35,323 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-02-13 22:28:35,942 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local

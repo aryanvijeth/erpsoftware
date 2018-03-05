@@ -1,0 +1,6 @@
+[ERROR] 2018-02-13 23:54:18,952 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-02-13 23:54:18.791066-127.0.0.1-bda
+[ERROR] 2018-02-13 23:56:07,899 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-02-13 23:56:07.871022-127.0.0.1-475
+[ERROR] 2018-02-13 23:56:32,388 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/error.py:
+New Exception collected with id: 2018-02-13 23:56:32.367449-127.0.0.1-28c

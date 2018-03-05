@@ -1,0 +1,93 @@
+2018-02-12 12:57:33,366 INFO getting app erpnext
+2018-02-12 12:57:33,909 INFO git clone https://github.com/frappe/erpnext --branch develop  --origin upstream
+2018-02-12 13:00:58,733 INFO installing erpnext
+2018-02-12 13:00:58,768 INFO ./env/bin/pip install -q  -e ./apps/erpnext --no-cache-dir
+2018-02-12 13:05:10,194 INFO creating new app trinity
+2018-02-12 13:08:06,279 INFO installing trinity
+2018-02-12 13:08:06,280 INFO ./env/bin/pip install -q  -e ./apps/trinity --no-cache-dir
+2018-02-12 15:10:13,997 INFO updating bench
+2018-02-12 15:10:14,011 INFO git pull
+2018-02-12 15:10:31,485 INFO ./env/bin/pip install Pillow
+2018-02-12 15:41:03,348 INFO getting app erpnext
+2018-02-12 15:41:03,414 INFO git clone https://github.com/frappe/erpnext   --origin upstream
+2018-02-12 16:10:34,501 INFO updating bench
+2018-02-12 16:10:34,501 INFO git pull
+2018-02-12 16:11:06,594 INFO ./env/bin/pip install Pillow
+2018-02-13 09:29:07,988 INFO updating bench
+2018-02-13 09:29:07,998 INFO git pull
+2018-02-13 09:29:29,639 INFO ./env/bin/pip install Pillow
+2018-02-13 09:31:37,068 INFO ./env/bin/pip install Pillow
+2018-02-13 09:31:37,442 INFO ./env/bin/pip install --upgrade pip
+2018-02-13 09:31:40,200 INFO ./env/bin/pip install -q -r /home/erpnexty/.bench/requirements.txt
+2018-02-13 09:32:00,511 INFO ./env/bin/pip install -q -r ./apps/erpnext/requirements.txt
+2018-02-13 09:32:01,811 INFO ./env/bin/pip install -q -r ./apps/trinity/requirements.txt
+2018-02-13 09:32:02,664 INFO ./env/bin/pip install -q -r ./apps/frappe/requirements.txt
+2018-02-13 09:32:07,965 INFO npm install
+2018-02-13 10:04:49,652 INFO updating bench
+2018-02-13 10:04:49,761 INFO git pull
+2018-02-13 10:04:59,680 INFO ./env/bin/pip install Pillow
+2018-02-13 10:05:00,987 INFO pulling frappe
+2018-02-13 10:05:00,988 INFO git fetch --all
+2018-02-13 10:05:05,020 INFO git reset --hard upstream/develop
+2018-02-13 10:05:05,204 INFO find . -name "*.pyc" -delete
+2018-02-13 10:05:05,379 INFO pulling erpnext
+2018-02-13 10:05:05,379 INFO git fetch --all
+2018-02-13 10:05:13,334 INFO git reset --hard upstream/develop
+2018-02-13 10:05:14,981 INFO find . -name "*.pyc" -delete
+2018-02-13 10:05:15,401 INFO ./env/bin/pip install --upgrade pip
+2018-02-13 10:05:16,292 INFO ./env/bin/pip install -q -r /home/erpnexty/.bench/requirements.txt
+2018-02-13 10:05:17,148 INFO ./env/bin/pip install -q -r ./apps/erpnext/requirements.txt
+2018-02-13 10:05:20,756 INFO ./env/bin/pip install -q -r ./apps/trinity/requirements.txt
+2018-02-13 10:05:21,437 INFO ./env/bin/pip install -q -r ./apps/frappe/requirements.txt
+2018-02-13 10:05:24,681 INFO npm install
+2018-02-13 10:21:17,763 INFO updating bench
+2018-02-13 10:21:17,863 INFO git pull
+2018-02-13 10:21:20,818 INFO updating bench
+2018-02-13 10:21:20,818 INFO git pull
+2018-02-13 10:21:30,001 INFO ./env/bin/pip install Pillow
+2018-02-13 10:21:33,114 INFO pulling frappe
+2018-02-13 10:21:33,117 INFO git pull  upstream develop
+2018-02-13 10:21:37,267 INFO find . -name "*.pyc" -delete
+2018-02-13 10:21:37,588 INFO pulling erpnext
+2018-02-13 10:21:37,595 INFO git pull  upstream develop
+2018-02-13 10:21:42,339 INFO find . -name "*.pyc" -delete
+2018-02-13 10:21:42,635 INFO ./env/bin/pip install --upgrade pip
+2018-02-13 10:21:48,616 INFO ./env/bin/pip install -q -r /home/erpnexty/.bench/requirements.txt
+2018-02-13 10:21:49,225 INFO ./env/bin/pip install -q -r ./apps/erpnext/requirements.txt
+2018-02-13 10:21:50,551 INFO ./env/bin/pip install -q -r ./apps/trinity/requirements.txt
+2018-02-13 10:21:51,223 INFO ./env/bin/pip install -q -r ./apps/frappe/requirements.txt
+2018-02-13 10:21:54,897 INFO npm install
+2018-02-13 10:24:07,036 INFO ./env/bin/pip install Pillow
+2018-02-13 10:24:07,504 INFO ./env/bin/pip install --upgrade pip
+2018-02-13 10:24:07,971 INFO ./env/bin/pip install -q -r /home/erpnexty/.bench/requirements.txt
+2018-02-13 10:24:08,449 INFO ./env/bin/pip install -q -r ./apps/erpnext/requirements.txt
+2018-02-13 10:24:09,154 INFO ./env/bin/pip install -q -r ./apps/trinity/requirements.txt
+2018-02-13 10:24:09,845 INFO ./env/bin/pip install -q -r ./apps/frappe/requirements.txt
+2018-02-13 10:24:13,581 INFO npm install
+2018-02-13 10:35:14,237 INFO git config --unset-all remote.upstream.fetch
+2018-02-13 10:35:14,369 INFO git config --add remote.upstream.fetch '+refs/heads/*:refs/remotes/upstream/*'
+2018-02-13 10:35:14,373 INFO git fetch upstream 
+2018-02-13 10:35:18,393 INFO git checkout master
+2018-02-13 10:35:19,647 INFO git merge upstream/master
+2018-02-13 10:35:25,533 INFO git config --unset-all remote.upstream.fetch
+2018-02-13 10:35:25,542 INFO git config --add remote.upstream.fetch '+refs/heads/*:refs/remotes/upstream/*'
+2018-02-13 10:35:25,554 INFO git fetch upstream 
+2018-02-13 10:35:30,244 INFO git checkout master
+2018-02-13 10:35:34,694 INFO git merge upstream/master
+2018-02-13 11:18:40,502 INFO git config --unset-all remote.upstream.fetch
+2018-02-13 11:18:40,514 INFO git config --add remote.upstream.fetch '+refs/heads/*:refs/remotes/upstream/*'
+2018-02-13 11:18:40,522 INFO git fetch upstream 
+2018-02-13 11:18:49,912 INFO git checkout master
+2018-02-13 11:18:51,363 INFO git merge upstream/master
+2018-02-13 11:18:58,379 INFO git config --unset-all remote.upstream.fetch
+2018-02-13 11:18:58,390 INFO git config --add remote.upstream.fetch '+refs/heads/*:refs/remotes/upstream/*'
+2018-02-13 11:18:58,426 INFO git fetch upstream 
+2018-02-13 11:19:05,458 INFO git checkout master
+2018-02-13 11:19:07,259 INFO git merge upstream/master
+2018-02-13 15:31:36,307 INFO updating bench
+2018-02-13 15:31:36,363 INFO git pull
+2018-02-13 15:32:45,234 INFO ./env/bin/pip install Pillow
+2018-02-27 13:08:12,842 INFO updating bench
+2018-02-27 13:08:12,852 INFO git pull
+2018-02-27 13:08:22,602 INFO npm install yarn
+2018-02-27 13:08:45,487 INFO ./env/bin/pip install Pillow

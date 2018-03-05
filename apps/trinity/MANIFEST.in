@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include trinity *.css
+recursive-include trinity *.csv
+recursive-include trinity *.html
+recursive-include trinity *.ico
+recursive-include trinity *.js
+recursive-include trinity *.json
+recursive-include trinity *.md
+recursive-include trinity *.png
+recursive-include trinity *.py
+recursive-include trinity *.svg
+recursive-include trinity *.txt
+recursive-exclude trinity *.pyc
