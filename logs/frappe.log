@@ -1762,3 +1762,15 @@ Queued events for site site1.local
 [DEBUG] 2018-03-02 17:24:24,655 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
 Site: site1.local
 Queued events for site site1.local
+[DEBUG] 2018-03-05 11:17:38,369 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-03-05 11:18:39,367 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-03-05 11:19:39,729 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
+[DEBUG] 2018-03-05 11:20:40,051 | /home/erpnexty/frappe-bench/apps/frappe/frappe/utils/scheduler.py:
+Site: site1.local
+Queued events for site site1.local
